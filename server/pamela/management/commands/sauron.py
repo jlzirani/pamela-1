@@ -2,7 +2,7 @@ import zmq, json
 from pamela.views import update_macs
 context = zmq.Context()
 socket = context.socket(zmq.REP)
-socket.bind("tcp://127.0.0.1:5000")
+socket.bind("tcp://0.0.0.0:5000")
 
 while True:
     msg = socket.recv()
