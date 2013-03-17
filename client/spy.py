@@ -62,7 +62,7 @@ def main():
         print "Sending dict"
         msg_in = socket.recv()
         print msg_in
-        time.sleep(60)
+        time.sleep(10)
 
 if __name__ == '__main__':
     main()
