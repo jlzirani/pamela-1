@@ -77,3 +77,8 @@ Le but est de séparer le projet en 3 :
 * Le client, qui récupère des données au hackerspace (pour l'instant uniquement les mac, mais pourquoi pas la t° ? )
 * le serveur qui ne fait que api (à terme, sur `api.urlab.be`)
 * l'interface, uniquement des fichiers statiques en html/js/css qui vont pomper des données sur le serveur (à terme, sur `pamela.urlab.be`)
+
+## Privacy
+Par défaut, si vous êtes au hackerspace votre macadress se retrouvera sur l'api. Si vous êtes contre, il suffit d'ajouter une corresponence mac -> owner contenant  `owner='Anonymous'` (respectez la convention svp) et `machine=''`
+
+Et si vous en avez rien à foutre, tapez votre nom ou votre pseudo ;) (ou le nom de votre chat)
