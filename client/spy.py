@@ -13,13 +13,15 @@ def postscan(macs):
     '''Function to execute after dumping mac adresses
     eg : clean unwanted mac adresses fo hiding routers and switches
     or fix encoding glitches'''
+    newmacs = {}
     for mac in macs:
         try:
             EUI(mac)
             IPAddress(macs[mac])
+            newmacs[mac] = macs[mac]
         except:
-            del macs[mac]
-    return macs
+            pass
+    return newmacs
 
 def scan(pre=False):
     '''Dump mac adresses and ips.
