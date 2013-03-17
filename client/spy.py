@@ -1,4 +1,4 @@
-from sh import arp_scan,arp
+from sh import arp
 from netaddr import *
 import zmq, time, json
 
