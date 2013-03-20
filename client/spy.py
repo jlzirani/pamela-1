@@ -1,4 +1,4 @@
-from sh import arp
+import sh
 from netaddr import *
 import zmq, time, json
 
@@ -33,7 +33,8 @@ def scan(pre=False):
 def arp_dump():
     '''[Internal] Uses arp -a to dump mac adresses
     Returns a dict {mac:ip,...}'''
-    dump = arp("-a")
+    with sh.sudo(k=True, _with=True):
+        dump = sh.arp('-a')
     lines = dump.strip().split('\n')
     ret = {}
     for line in lines:
