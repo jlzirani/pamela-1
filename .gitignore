@@ -5,3 +5,5 @@ local_settings.py
 *.sock
 *.log
 *.pid
+server/db.sql
+server/ve
